@@ -1,3 +1,4 @@
+package Exercícios;
 //Construir um programa que calcula a média das seguintes notas: 7.5, 4.5 e 9
 //Construir um programa para calcular a área de um quadrado de 350m de lado
 //Construir um programa para calcular a área de uma circunferencia com raio 5cm (ac=pi*raio^2)

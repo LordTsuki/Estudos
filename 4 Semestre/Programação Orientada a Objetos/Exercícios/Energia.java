@@ -1,3 +1,4 @@
+package Exercícios;
 //Sabe-se que 1 quilowatt de energia custa 1/500 avos do salário mínimo.
 //Faça um programa que receba o valor do salário mínimo e a quantidade de quilowatts consumida por uma residencia
 //Calcule e mostre:
