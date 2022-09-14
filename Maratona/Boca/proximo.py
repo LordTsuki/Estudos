@@ -7,5 +7,3 @@ while i < int(N):
     X = input()
     X = int(X)
     print(X + 1)
-
-
