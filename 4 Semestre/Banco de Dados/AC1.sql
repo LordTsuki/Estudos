@@ -26,7 +26,7 @@ CREATE TABLE Classe(
 	CONSTRAINT FKIDHabilidade FOREIGN KEY (IDHabilidade) REFERENCES Habilidade (IDHabilidade)
 )
 
-ALTER TABLE Classe ALTER Caracteristicas varchar(500) null
+ALTER TABLE Classe ALTER COLUMN Caracteristicas varchar(500) null
 
 CREATE TABLE Personagem(
 	IDPersonagem int not null identity,
