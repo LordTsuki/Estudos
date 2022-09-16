@@ -20,18 +20,13 @@ while N != 0:
 
     S_new = ''
 
-    if 'A' in S:
+    if 'A' or 'S' or 'E' or 'I' or 'O' or ' ' in S:
         S = S.replace('A', '@')
-    if 'S' in S:
         S = S.replace('S', '$')
-    if 'E' in S:
         S = S.replace('E', '3')
-    if 'I' in S:
         S = S.replace('I', '!')
-    if 'O' in S:
         S = S.replace('O', '0')
-    if ' ' in S:
-        S = S.replace(' ', '#')
+        S = S.replace(' ', '#')    
 
     for i in S:
         if i in base:
