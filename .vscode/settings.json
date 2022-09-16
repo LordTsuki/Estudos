@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "4 Semestre/Programação Orientada a Objetos/exercicios",
-        "4 Semestre/Programação Orientada a Objetos"
+        "4 Semestre/Programação Orientada a Objetos",
+        "Maratona/B0CA/src"
     ]
 }
