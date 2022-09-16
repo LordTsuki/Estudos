@@ -1,3 +1,4 @@
+package aulas.exer;
 import java.util.Scanner;
 
 public class MediaSalarioFilhos 

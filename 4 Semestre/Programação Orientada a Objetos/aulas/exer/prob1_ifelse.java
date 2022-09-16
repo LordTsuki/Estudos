@@ -1,4 +1,4 @@
-package Exercícios;
+package aulas.exer;
 import java.util.Scanner;
 
 public class prob1_ifelse {
