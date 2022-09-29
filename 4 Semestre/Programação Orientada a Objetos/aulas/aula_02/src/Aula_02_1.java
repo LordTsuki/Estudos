@@ -1,3 +1,4 @@
+package aulas.aula_02.src;
 public class Aula_02_1 
 {
     public static void main(String[] args) throws Exception

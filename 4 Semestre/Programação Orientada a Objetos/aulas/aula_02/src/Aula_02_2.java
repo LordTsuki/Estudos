@@ -1,3 +1,4 @@
+package aulas.aula_02.src;
 import java.util.Scanner;
 
 public class Aula_02_2 
@@ -16,5 +17,6 @@ public class Aula_02_2
 
         System.out.println("Nome lido = " + nome);
         System.out.println("Idade lida = " + idade);
+        entrada.close();
     }    
 }

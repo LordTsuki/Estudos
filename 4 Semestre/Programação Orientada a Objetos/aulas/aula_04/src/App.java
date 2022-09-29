@@ -1,4 +1,4 @@
-package aulas.exercicios.src;
+package aulas.aula_04.src;
 
 import java.util.Scanner;
 

@@ -1,3 +1,4 @@
+package aulas.aula_03.src;
 import java.util.Scanner;
 
 public class Aula_03_2

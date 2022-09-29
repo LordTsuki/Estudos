@@ -1,4 +1,4 @@
-package aulas.exercicios.src;
+package aulas.aula_04.src;
 public class Aula_04_1 
 {
     String nome;

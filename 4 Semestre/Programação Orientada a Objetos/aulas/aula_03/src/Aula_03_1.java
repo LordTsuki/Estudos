@@ -1,3 +1,4 @@
+package aulas.aula_03.src;
 import java.util.Scanner;
 
 public class Aula_03_1
@@ -27,6 +28,8 @@ public class Aula_03_1
 
         System.out.println("Defina o ano: ");
         anodata2 = entrada.nextInt();
+
+        entrada.close();
 
         if (anodata1 < anodata2)
         {

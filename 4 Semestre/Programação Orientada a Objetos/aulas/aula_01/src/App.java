@@ -1,5 +1,6 @@
-import java.io.*;
-public class Aula_01
+package aulas.aula_01.src;
+
+public class App
 {
     public static void main (String[] args)
     {
