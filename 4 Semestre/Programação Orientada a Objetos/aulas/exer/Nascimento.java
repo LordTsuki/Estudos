@@ -26,6 +26,8 @@ public class Nascimento
             }
         }
 
+        entrada.close();
+
         System.out.println("O João tem " + (ano-idade) + " anos de idade");
         System.out.println("O João terá " + (anofuturo-idade) + " em 2024");
     }

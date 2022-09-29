@@ -21,6 +21,8 @@ public class Energia
         System.out.println("Digite a quantidade de quilowatts: ");
         quilowatts = entrada.nextInt();
 
+        entrada.close();
+
         valorquilo = salariominimo / 500;
         valorpago = quilowatts * valorquilo;
         valorpagodesconto = valorpago - (valorpago * 15/100.0);
