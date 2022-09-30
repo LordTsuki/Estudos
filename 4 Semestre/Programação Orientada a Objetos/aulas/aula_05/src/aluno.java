@@ -7,7 +7,7 @@ public class aluno
 
     public Aluno() {
         nome = " ";
-        enreco = " ";
+        endereco = " ";
         idade = 0;
         sexo = " ";
         rg = " ";
