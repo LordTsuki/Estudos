@@ -1,0 +1,99 @@
+#include <Arduino.h>
+#include <SoftwareSerial.h>
+
+SoftwareSerial bt (2,3); //tx rx
+
+#define M_A_1 10
+#define M_A_2 9
+#define M_B_1 8
+#define M_B_2 7
+#define velA 11
+#define velB 6
+
+char command;
+
+void setup() {
+pinMode(M_A_1,OUTPUT);
+pinMode(M_A_2,OUTPUT);
+pinMode(M_B_1,OUTPUT);
+pinMode(M_B_2,OUTPUT);
+pinMode(velA,OUTPUT);
+pinMode(velB,OUTPUT);
+Serial.begin(9600);
+
+}
+
+void frente(uint8_t velocidade){
+digitalWrite(M_A_1,LOW);
+digitalWrite(M_A_2,LOW);
+digitalWrite(M_B_1,HIGH);
+digitalWrite(M_B_2,LOW);
+analogWrite(velA,velocidade);
+analogWrite(velB,velocidade);
+
+}
+
+void curva_esq(uint8_t velocidade){
+
+digitalWrite(M_A_1,HIGH);
+digitalWrite(M_A_2,LOW);
+digitalWrite(M_B_1,LOW);
+digitalWrite(M_B_2,LOW);
+analogWrite(velA,velocidade);
+analogWrite(velB,velocidade);
+
+}
+
+void curva_dir(uint8_t velocidade){
+digitalWrite(M_A_1,LOW);
+digitalWrite(M_A_2,HIGH);
+digitalWrite(M_B_1,LOW);
+digitalWrite(M_B_2,LOW);
+analogWrite(velA,velocidade);
+analogWrite(velB,velocidade);
+}
+
+
+void curva_dir_frente(uint8_t velocidade){
+digitalWrite(M_A_1,LOW);
+digitalWrite(M_A_2,HIGH);
+digitalWrite(M_B_1,HIGH);
+digitalWrite(M_B_2,LOW);
+analogWrite(velA,velocidade);
+analogWrite(velB,velocidade);
+}
+
+
+void curva_esq_frente(uint8_t velocidade){
+digitalWrite(M_A_1,LOW);
+digitalWrite(M_A_2,HIGH);
+digitalWrite(M_B_1,LOW);
+digitalWrite(M_B_2,HIGH);
+analogWrite(velA,velocidade);
+analogWrite(velB,velocidade);
+}
+
+void re(uint8_t velocidade){
+digitalWrite(M_A_1,LOW);
+digitalWrite(M_A_2,LOW);
+digitalWrite(M_B_1,LOW);
+digitalWrite(M_B_2,HIGH);
+analogWrite(velA,velocidade);
+analogWrite(velB,velocidade);
+}
+
+
+void loop() {
+
+command = Serial.read();
+delay(1000);
+
+if(command == 'B') re(120);
+else if(command == 'F') frente(180);
+else if(command == 'L') curva_esq(120);
+else if(command == 'R') curva_dir(120);
+else if(command == 'I') curva_dir_frente(120);
+else if(command == 'G')curva_esq_frente(120);
+else frente(0);
+
+}
