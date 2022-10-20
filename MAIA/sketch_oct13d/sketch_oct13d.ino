@@ -25,9 +25,9 @@ Serial.begin(9600);
 
 void frente(uint8_t velocidade){
 digitalWrite(M_A_1,LOW);
-digitalWrite(M_A_2,LOW);
-digitalWrite(M_B_1,HIGH);
-digitalWrite(M_B_2,LOW);
+digitalWrite(M_A_2,HIGH);
+digitalWrite(M_B_1,LOW);
+digitalWrite(M_B_2,HIGH);
 analogWrite(velA,velocidade);
 analogWrite(velB,velocidade);
 
@@ -35,10 +35,10 @@ analogWrite(velB,velocidade);
 
 void curva_esq(uint8_t velocidade){
 
-digitalWrite(M_A_1,HIGH);
+digitalWrite(M_A_1,LOW);
 digitalWrite(M_A_2,LOW);
 digitalWrite(M_B_1,LOW);
-digitalWrite(M_B_2,LOW);
+digitalWrite(M_B_2,HIGH);
 analogWrite(velA,velocidade);
 analogWrite(velB,velocidade);
 
@@ -65,16 +65,7 @@ analogWrite(velB,velocidade);
 
 
 void curva_esq_frente(uint8_t velocidade){
-digitalWrite(M_A_1,LOW);
-digitalWrite(M_A_2,HIGH);
-digitalWrite(M_B_1,LOW);
-digitalWrite(M_B_2,HIGH);
-analogWrite(velA,velocidade);
-analogWrite(velB,velocidade);
-}
-
-void re(uint8_t velocidade){
-digitalWrite(M_A_1,LOW);
+digitalWrite(M_A_1,HIGH);
 digitalWrite(M_A_2,LOW);
 digitalWrite(M_B_1,LOW);
 digitalWrite(M_B_2,HIGH);
@@ -82,18 +73,44 @@ analogWrite(velA,velocidade);
 analogWrite(velB,velocidade);
 }
 
+void re(uint8_t velocidade){
+digitalWrite(M_A_1,HIGH);
+digitalWrite(M_A_2,LOW);
+digitalWrite(M_B_1,HIGH);
+digitalWrite(M_B_2,LOW);
+analogWrite(velA,velocidade);
+analogWrite(velB,velocidade);
+}
+
 
 void loop() {
 
+frente(120);
+delay(200);
+frente(0);
+delay(200);
+curva_dir(120);
+delay(200);
+frente(0);
+delay(200);
+frente(120);
+delay(200);
+frente(0);
+delay(200);
+curva_esq(120);
+delay(200);
+frente(0);
+delay(200);
+/*
 command = Serial.read();
 delay(1000);
 
 if(command == 'B') re(120);
-else if(command == 'F') frente(180);
+else if(command == 'F') frente(120);
 else if(command == 'L') curva_esq(120);
 else if(command == 'R') curva_dir(120);
 else if(command == 'I') curva_dir_frente(120);
 else if(command == 'G')curva_esq_frente(120);
 else frente(0);
-
+*/
 }
